@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  namespace: edu-practical-goldwasser
+spec:
+  ingressClassName: nginx
+  rules:
+   - host: edu-practical-goldwasser.sirius-k8s.dvmn.org
+     http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: nginx-service
+                port:
+                  number: 80
