@@ -4,7 +4,7 @@ metadata:
   namespace: edu-practical-goldwasser
   name: nginx-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: nginx
   ports:

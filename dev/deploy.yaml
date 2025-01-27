@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: django-deploy
-  namespace: dev
+  namespace: edu-practical-goldwasser
   labels:
     app: django-app-deploy
 spec:
@@ -23,3 +23,5 @@ spec:
           envFrom:
           - configMapRef:
               name: django-app-config
+          - secretRef:
+              name: django-secret-config

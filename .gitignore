@@ -2,5 +2,4 @@
 __pycache__/
 *.py[cod]
 *$py.class
-k8s/config.yaml
-*/config.yaml
+dev/secret.yaml

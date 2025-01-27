@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: django-clear-sessions
-  namespace: dev
+  namespace: edu-practical-goldwasser
 spec:
   schedule: "* * * * *"
   startingDeadlineSeconds: 20
@@ -13,7 +13,7 @@ spec:
         spec:
           containers:
             - name: django-clear-sessions
-              image: django_app:latest
+              image: miazigoo/django_app:f9cb8d0
               ports:
                 - containerPort: 80
               imagePullPolicy: IfNotPresent
@@ -24,4 +24,6 @@ spec:
               envFrom:
                 - configMapRef:
                     name: django-app-config
+                - secretRef:
+                    name: django-secret-config
           restartPolicy: OnFailure

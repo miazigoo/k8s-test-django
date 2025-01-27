@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-   - host: edu-practical-goldwasser.sirius-k8s.dvmn.org
+   - host: b00bs.online
      http:
         paths:
           - path: /

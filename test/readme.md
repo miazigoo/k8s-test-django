@@ -1,5 +1,18 @@
+# Развертывание NGINX
 
-- Установить **_cert-manager_** для TLS сертификатов:
+- Для изменения **namespace** измените в файлах metadata: namespace: Ваш_namespace
+- Поставить Nginx POD:
 ```shell
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.16.2/cert-manager.yaml
+kubectl apply -f simple-pod.yaml
 ```
+- Подключить сервис:
+```shell
+kubectl apply -f nginx-service.yaml
+```
+- В файле `nginx-ingress.yaml` укажите ваш домен: `rules:- host: Ваш_Домен`
+- Подключить Ingress:
+```shell
+kubectl apply -f nginx-ingress.yaml
+```
+
+

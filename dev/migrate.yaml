@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: django-migrate-job
-  namespace: dev
+  namespace: edu-practical-goldwasser
 spec:
   backoffLimit: 2
   activeDeadlineSeconds: 30

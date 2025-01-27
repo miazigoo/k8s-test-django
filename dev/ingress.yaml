@@ -2,11 +2,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-django
-  namespace: dev
+  namespace: edu-practical-goldwasser
 spec:
   ingressClassName: nginx
   rules:
-   - host: b00bs.online
+   - host: b00bs.ru
      http:
         paths:
           - path: /
